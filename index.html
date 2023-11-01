@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <img src="background.jpg" alt="background" />
+    <div class="container">
+      <div class="calculator">
+        <div class="display">
+          <input
+            id="secondInput"
+            onclick="calculation += secondInput.value; userInput.value = calculation;"
+            readonly
+          />
+          <input id="userInput" placeholder="0" readonly />
+        </div>
+        <div class="row-1">
+          <button onclick="clearEquation()" class="operator">CE</button>
+          <button onclick="clearAll()" class="operator">C</button>
+          <button onclick="erase()" class="operator">
+            <i class="fa-solid fa-delete-left" style="color: #ffffff"></i>
+          </button>
+          <button onclick="press('/')" class="operator">/</button>
+        </div>
+        <div class="row-2">
+          <button onclick="press('7')">7</button>
+          <button onclick="press('8')">8</button>
+          <button onclick="press('9')">9</button>
+          <button onclick="press('*')" class="operator">*</button>
+        </div>
+        <div class="row-3">
+          <button onclick="press('4')">4</button>
+          <button onclick="press('5')">5</button>
+          <button onclick="press('6')">6</button>
+          <button onclick="press('-')" class="operator">-</button>
+        </div>
+        <div class="row-4">
+          <button onclick="press('1')">1</button>
+          <button onclick="press('2')">2</button>
+          <button onclick="press('3')">3</button>
+          <button onclick="press('+')" class="operator">+</button>
+        </div>
+        <div class="row-5">
+          <button onclick="press('.')">.</button>
+          <button onclick="press('0')">0</button>
+          <button onclick="equal()" class="equal">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
